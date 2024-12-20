@@ -1,0 +1,10 @@
+<header>
+  <nav>
+    <span routerLink="/">{{ title() }}</span>
+    <ul>
+      @for (page of pages(); track $index){
+      <li routerLink="{{ page.url }}">{{ page.title | capitalize }}</li>
+      }
+    </ul>
+  </nav>
+</header>
